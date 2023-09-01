@@ -1,5 +1,6 @@
 import './App.css';
 import MyClassComponent from './MyClassComponent';
+import { useState } from 'react';
 
 const element = <h1>Trance Around The World, with Above & Beyond</h1>;
 const elementWithClass = <h2 className="anjunaStyle">Anjunabeats</h2>;
@@ -38,9 +39,32 @@ function MyFunctionalComponent(props) {
   );
 }
 
-function App() {
+function Counter() {
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount(count + 1)}>Increment Me! {count}</button>
+}
+
+function Header() {
   return (
-    <div>
+    <>
+    I am this website's Header!
+    <hr/>
+    </>
+  );
+}
+
+function Footer() {
+  return (
+    <>
+    <hr/>
+    I am this app's Footer!
+    </>
+  );
+}
+
+function Content() {
+  return (
+    <>
       {element}
       {elementWithClass}
       {elementNesting}
@@ -52,7 +76,18 @@ function App() {
       <MyFunctionalComponent name="Jono" />
       <MyFunctionalComponent name="Paavo" />
       <MyFunctionalComponent name="Tony" />
-    </div>
+      <Counter/>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Header/>
+      <Content/>
+      <Footer/>
+    </>
   );
 }
 
