@@ -1,6 +1,6 @@
 import './App.css';
 import MyClassComponent from './MyClassComponent';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MyFunctionalComponent from './MyFunctionalComponent';
 
 const element = <h1>Trance Around The World, with Above & Beyond</h1>;
@@ -41,8 +41,8 @@ function Counter() {
 function Header() {
   return (
     <>
-    I am this website's Header!
-    <hr/>
+      I am this website's Header!
+      <hr />
     </>
   );
 }
@@ -50,8 +50,8 @@ function Header() {
 function Footer() {
   return (
     <>
-    <hr/>
-    I am this app's Footer!
+      <hr />
+      I am this app's Footer!
     </>
   );
 }
@@ -70,17 +70,27 @@ function Content() {
       <MyFunctionalComponent name="Jono" />
       <MyFunctionalComponent name="Paavo" />
       <MyFunctionalComponent name="Tony" />
-      <Counter/>
+      <Counter />
+      <UseEffectLearning />
     </>
   );
+}
+
+function UseEffectLearning() {
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then(response => response.json())
+      .then(data => console.log(data));
+  }, []);
+  return <div>Check the console for data!!!</div>
 }
 
 function App() {
   return (
     <>
-      <Header/>
-      <Content/>
-      <Footer/>
+      <Header />
+      <Content />
+      <Footer />
     </>
   );
 }
