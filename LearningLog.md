@@ -2,6 +2,7 @@
 
 - Basic Syntax
 - JSX
+- Components
 - Props
 - State Management (useState)
 - Effect Hook (useEffect)
