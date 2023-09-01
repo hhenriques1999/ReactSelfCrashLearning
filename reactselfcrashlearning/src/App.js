@@ -1,6 +1,7 @@
 import './App.css';
 import MyClassComponent from './MyClassComponent';
 import { useState } from 'react';
+import MyFunctionalComponent from './MyFunctionalComponent';
 
 const element = <h1>Trance Around The World, with Above & Beyond</h1>;
 const elementWithClass = <h2 className="anjunaStyle">Anjunabeats</h2>;
@@ -31,13 +32,6 @@ const listWithWords = (
   </>
 )
 
-function MyFunctionalComponent(props) {
-  return (
-    <>
-      <h3>{props.name} is a great producer!</h3>
-    </>
-  );
-}
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -65,13 +59,13 @@ function Footer() {
 function Content() {
   return (
     <>
-      {element}
+      {/* {element}
       {elementWithClass}
       {elementNesting}
       {johnHas}
       {selfClosingTag}
       {conditionalContent}
-      {listWithWords}
+      {listWithWords} */}
       <MyClassComponent />
       <MyFunctionalComponent name="Jono" />
       <MyFunctionalComponent name="Paavo" />
