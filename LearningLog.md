@@ -1,7 +1,7 @@
 # Day One
 
-- Basic Syntax
-- JSX
+- Basic Syntax ✅
+- JSX ✅
 - Components
 - Props
 - State Management (useState)
