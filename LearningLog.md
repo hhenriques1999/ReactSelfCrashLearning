@@ -1,0 +1,13 @@
+# Day One
+
+- Basic Syntax
+- JSX
+- Props
+- State Management (useState)
+- Effect Hook (useEffect)
+- Conditional Rendering
+- Lists and Keys
+- Event Handling
+- Controlled Components
+- Component Composition
+- React Fragments
