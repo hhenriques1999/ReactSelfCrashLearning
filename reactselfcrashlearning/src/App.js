@@ -1,12 +1,45 @@
 import './App.css';
 
-function App() {
-  const name = "John";
-  return (
+const element = <h1>Trance Around The World, with Above & Beyond</h1>;
+const elementWithClass = <h2 className="anjunaStyle">Anjunabeats</h2>;
+const elementNesting = (
+  <div>
+    <h1>Ilan Bluestone</h1>
+    <p>Impulse</p>
+  </div>
+);
+const embeddingContent = "3 cars";
+const johnHas = <h1>John has {embeddingContent}</h1>;
+const selfClosingTag = <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII" alt="Description"/>
+
+const isJono = true;
+
+const conditionalContent = isJono ? <p>Yes it is</p> : <p>No, it isn't</p>;
+
+const numbers = [1, 2, 3];
+
+const listItems = numbers.map(num => <li key={num}>{num}</li>)
+
+const listWithWords = (
+  <>
+    Here's a list of items
     <>
-      <h1 className="my-class">Hello {name}</h1>
-      <h2>Hello Arthur Morgan!</h2>
+      {listItems}
     </>
+  </>
+)
+
+function App() {
+  return (
+    <div>
+      {element}
+      {elementWithClass}
+      {elementNesting}
+      {johnHas}
+      {selfClosingTag}
+      {conditionalContent}
+      {listWithWords}
+    </div>
   );
 }
 
