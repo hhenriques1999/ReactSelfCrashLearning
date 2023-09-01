@@ -71,7 +71,7 @@ function Content() {
       <MyFunctionalComponent name="Paavo" />
       <MyFunctionalComponent name="Tony" />
       <Counter />
-      <UseEffectLearning />
+      <UseEffectLearning/>
     </>
   );
 }
