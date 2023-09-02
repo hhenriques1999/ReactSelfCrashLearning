@@ -1,32 +1,8 @@
 import './App.css';
-import React, { createContext, useContext, useState } from 'react';
-
-const CountContext = createContext();
-
-function CountProvider({children}) {
-  const [count, setCount] = useState(0);
-  return (
-    <CountContext.Provider value={{count, setCount}}>
-      {children}
-    </CountContext.Provider>
-  );
-}
-
-function useCount() {
-  return useContext(CountContext);
-}
-
-function Counter() {
-  const {count,setCount} = useCount();
-
-  return (
-    <div className='d-flex gap-2'>
-      <p>Count: {count}</p>
-      <button className='btn btn-primary' onClick={() => setCount(count + 1)}>Increment</button>
-      <button className='btn btn-danger' onClick={() => setCount(count - 1)}>Decrement</button>
-    </div>
-  );
-}
+import React, { } from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import Counter from './Counter'
 
 // This component is a header
 function Header() {
@@ -55,9 +31,11 @@ function Footer() {
 // This component is to be used to include all the main content for the website
 function Content() {
   return (
-    <CountProvider>
-      <Counter />
-    </CountProvider>
+    <>
+      <Provider store={store}>
+        <Counter />  
+      </Provider>
+    </>
   );
 }
 
