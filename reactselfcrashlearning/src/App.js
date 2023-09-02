@@ -1,6 +1,6 @@
 import './App.css';
 // import MyClassComponent from './MyClassComponent';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import MyFunctionalComponent from './MyFunctionalComponent';
 
 // const element = <h1>Trance Around The World, with Above & Beyond</h1>;
@@ -32,6 +32,18 @@ import MyFunctionalComponent from './MyFunctionalComponent';
 //   </>
 // )
 
+function ParentAndChildCommunication() {
+  const sayHello = (name) => alert(`Hello, ${name}`);
+
+  return <ChildComponentCommunication greet={sayHello}/>
+}
+
+// This child component holds a bridge to the parent in such a way that when the local function here is called, 
+// the parent will receive the value and will be able to use it as it may wish to.
+function ChildComponentCommunication({greet}) {
+  return <button onClick={() => greet('John')}>Click me!</button>
+}
+
 // This component is a parent component that has a child component with props being passed to it
 function ParentComponent() {
   return <ChildComponent name="Jono" age={69} />;
@@ -45,6 +57,12 @@ function ChildComponent(props) {
       <p>Age: {props.age}</p>
     </>
   );
+}
+
+// The code below sets default values for the properties of the ChildComponent
+ChildComponent.defaultProps = {
+  name: "Unknown",
+  age: 0,
 }
 
 // This component is a child component that destructures the data
@@ -105,6 +123,8 @@ function Content() {
       <MyFunctionalComponent name="Tony" />
       <PropDestructuring />
       <ParentComponent />
+      <ChildComponent/> {/* This is a child component being called in the raw form in order to understand default values */}
+      <ParentAndChildCommunication/>
       {/* <Counter /> */}
       {/* <UseEffectLearning/> */}
     </>
