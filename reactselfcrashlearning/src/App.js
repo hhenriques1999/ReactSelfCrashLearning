@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 
 const commonFlexStyle = { "display": "flex", "justify-content": "center", "align-items": "center" };
 
-const headerStyle = { commonFlexStyle, "margin-top": ".25em" };
-const footerStyle = { commonFlexStyle, "margin-bottom": ".25em" };
+const headerStyle = { commonFlexStyle, "marginTop": ".5em" };
+const footerStyle = { commonFlexStyle, "marginBottom": ".5em" };
 
 function Counter() {
   const [count, setCounter] = useState(0);
@@ -13,10 +13,12 @@ function Counter() {
   const decrement = () => setCounter(count - 1);
 
   return (
-    <div>
+    <div className='d-flex flex-column justify-content-center align-items-center'>
       <p>Count: {count}</p>
-      <button onClick={increment}>Increase the counter!</button>&nbsp;
-      <button onClick={decrement}>Decrease the counter!</button>
+      <div className='d-flex flex-row gap-2'>
+        <button className="btn btn-primary" onClick={increment}>Increase the counter!</button>
+        <button className="btn btn-primary" onClick={decrement}>Decrease the counter!</button>
+      </div>
     </div>
   );
 }
