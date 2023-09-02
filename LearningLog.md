@@ -3,7 +3,8 @@
 - Basic Syntax ✅
 - JSX ✅
 - Components ✅
-- Props
+- Props ✅
+    - Parent and Child Communication Between Props ✅
 - State Management (useState)
 - Effect Hook (useEffect)
 - Conditional Rendering

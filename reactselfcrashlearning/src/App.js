@@ -2,6 +2,8 @@ import './App.css';
 // import MyClassComponent from './MyClassComponent';
 // import { useEffect, useState } from 'react';
 import MyFunctionalComponent from './MyFunctionalComponent';
+import ParentComponent from './ParentComponent';
+import ParentForConditionalRendering from './ParentForConditionalRendering';
 
 // const element = <h1>Trance Around The World, with Above & Beyond</h1>;
 // const elementWithClass = <h2 className="anjunaStyle">Anjunabeats</h2>;
@@ -35,19 +37,19 @@ import MyFunctionalComponent from './MyFunctionalComponent';
 function ParentAndChildCommunication() {
   const sayHello = (name) => alert(`Hello, ${name}`);
 
-  return <ChildComponentCommunication greet={sayHello}/>
+  return <ChildComponentCommunication greet={sayHello} />
 }
 
 // This child component holds a bridge to the parent in such a way that when the local function here is called, 
 // the parent will receive the value and will be able to use it as it may wish to.
-function ChildComponentCommunication({greet}) {
+function ChildComponentCommunication({ greet }) {
   return <button onClick={() => greet('John')}>Click me!</button>
 }
 
 // This component is a parent component that has a child component with props being passed to it
-function ParentComponent() {
-  return <ChildComponent name="Jono" age={69} />;
-}
+// function ParentComponent() {
+//   return <ChildComponent name="Jono" age={69} />;
+// }
 
 // This component is a child component that can receive props
 function ChildComponent(props) {
@@ -123,8 +125,9 @@ function Content() {
       <MyFunctionalComponent name="Tony" />
       <PropDestructuring />
       <ParentComponent />
-      <ChildComponent/> {/* This is a child component being called in the raw form in order to understand default values */}
-      <ParentAndChildCommunication/>
+      <ChildComponent /> {/* This is a child component being called in the raw form in order to understand default values */}
+      <ParentAndChildCommunication />
+      <ParentForConditionalRendering />
       {/* <Counter /> */}
       {/* <UseEffectLearning/> */}
     </>
