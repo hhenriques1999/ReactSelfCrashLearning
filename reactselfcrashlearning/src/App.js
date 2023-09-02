@@ -1,13 +1,33 @@
 import './App.css';
-import React from 'react';
-import ParentComponent from './ParentComponent';
+import React, { useState } from 'react';
+
+const commonFlexStyle = { "display": "flex", "justify-content": "center", "align-items": "center" };
+
+const headerStyle = { commonFlexStyle, "margin-top": ".25em" };
+const footerStyle = { commonFlexStyle, "margin-bottom": ".25em" };
+
+function Counter() {
+  const [count, setCounter] = useState(0);
+
+  const increment = () => setCounter(count + 1);
+  const decrement = () => setCounter(count - 1);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increase the counter!</button>&nbsp;
+      <button onClick={decrement}>Decrease the counter!</button>
+    </div>
+  );
+}
 
 // This component is a header
 function Header() {
   return (
     <>
-      I am this website's Header!
-      <hr />
+      <div style={headerStyle}>
+        I am this website's Header!
+      </div><hr />
     </>
   );
 }
@@ -17,7 +37,9 @@ function Footer() {
   return (
     <>
       <hr />
-      I am this app's Footer!
+      <div style={footerStyle}>
+        I am this app's Footer!
+      </div>
     </>
   );
 }
@@ -26,7 +48,7 @@ function Footer() {
 function Content() {
   return (
     <>
-      <ParentComponent/>      
+      <Counter />
     </>
   );
 }
