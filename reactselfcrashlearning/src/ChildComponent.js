@@ -1,8 +1,8 @@
-function ChildComponent({updateParent}) {
+function ChildComponent({itemList}) {
     return (
-        <button onClick={() => updateParent("Data updated by child")}>
-            Update Parent!
-        </button>
+        <ul>
+            {itemList.map((item) => <li key={item}>{item}</li>)}
+        </ul>
     );
 }
 

@@ -1,4 +1,6 @@
 import './App.css';
+import React from 'react';
+import ParentComponent from './ParentComponent';
 
 // This component is a header
 function Header() {
@@ -24,7 +26,7 @@ function Footer() {
 function Content() {
   return (
     <>
-      Clean!
+      <ParentComponent/>      
     </>
   );
 }

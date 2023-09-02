@@ -2,17 +2,9 @@ import React, { useState } from 'react';
 import ChildComponent from './ChildComponent';
 
 function ParentComponent() {
-    const [parentData, setParentData] = useState("Initial data");
-
-    const updateData = (newData) => {
-        setParentData(newData);
-    };
-
+    const items = ['Apple', 'Banyanyer', 'Luhmn'];
     return (
-        <div>
-            <h1>{parentData}</h1>
-            <ChildComponent updateParent={updateData}/>
-        </div>
+        <ChildComponent itemList={items} />
     );
 }
 
