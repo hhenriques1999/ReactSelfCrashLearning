@@ -10,7 +10,7 @@
 
 - State Management (useState) ✅
     - Redux State Management ✅
-- Effect Hook (useEffect)
+- Effect Hook (useEffect) ✅
 - Conditional Rendering
 - Lists and Keys
 - Event Handling
