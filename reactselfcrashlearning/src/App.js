@@ -25,14 +25,49 @@ function Footer() {
   );
 }
 
+function WelcomeMessage({ user }) {
+  return <h1>Welcome, {user.name}</h1>
+}
 
+function SignInMessage() {
+  return <h1>Please, sign in!</h1>
+}
 
+function Notification({ type }) {
+  switch (type) {
+    case 'success':
+      return <div className='success'>Success!</div>
+    case 'error':
+      return <div className='error'>Error!</div>
+    default:
+      return <div className='info'>Info!</div>
+  }
+}
 
 // This component is to be used to include all the main content for the website
 function Content() {
+  const isLoggedIn = true;
+  const tasks = ['Task 1', 'Task 2']
+
+  const user = null;
+  let message;
+
+  const user2 = { name: "John" }
+
+  if (user) {
+    message = <h1>Hello, {user.name}!</h1>
+  }
+  else {
+    message = <h1>Please, sign in.</h1>
+  }
+
   return (
     <>
-      Hey!
+      {isLoggedIn ? <h1>Welcome back!</h1> : <h1>Please log in.</h1>}
+      {tasks.length > 0 && <h1>You have tasks to complete.</h1>}
+      {message}
+      {user2 ? <WelcomeMessage user={user2} /> : <SignInMessage />}
+      {<Notification type="success" />}
     </>
   );
 }
