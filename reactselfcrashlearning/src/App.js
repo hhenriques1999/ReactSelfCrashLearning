@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import CounterComponent from './CounterComponent';
 
 // This component is a header
 function Header() {
@@ -26,24 +25,14 @@ function Footer() {
   );
 }
 
-function CleanupTest() {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      console.log("This runs after 1 second");
-    }, 1000);
 
-    return () => {
-      clearTimeout(timer);
-    }
-  }, []);
-}
+
 
 // This component is to be used to include all the main content for the website
 function Content() {
   return (
     <>
-      <CounterComponent />
-      <CleanupTest/>
+      Hey!
     </>
   );
 }
