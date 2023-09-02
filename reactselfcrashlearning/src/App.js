@@ -1,24 +1,29 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-const commonFlexStyle = { "display": "flex", "justify-content": "center", "align-items": "center" };
+const CountContext = createContext();
 
-const headerStyle = { commonFlexStyle, "marginTop": ".5em" };
-const footerStyle = { commonFlexStyle, "marginBottom": ".5em" };
+function CountProvider({children}) {
+  const [count, setCount] = useState(0);
+  return (
+    <CountContext.Provider value={{count, setCount}}>
+      {children}
+    </CountContext.Provider>
+  );
+}
+
+function useCount() {
+  return useContext(CountContext);
+}
 
 function Counter() {
-  const [count, setCounter] = useState(0);
-
-  const increment = () => setCounter(count + 1);
-  const decrement = () => setCounter(count - 1);
+  const {count,setCount} = useCount();
 
   return (
-    <div className='d-flex flex-column justify-content-center align-items-center'>
+    <div className='d-flex gap-2'>
       <p>Count: {count}</p>
-      <div className='d-flex flex-row gap-2'>
-        <button className="btn btn-primary" onClick={increment}>Increase the counter!</button>
-        <button className="btn btn-primary" onClick={decrement}>Decrease the counter!</button>
-      </div>
+      <button className='btn btn-primary' onClick={() => setCount(count + 1)}>Increment</button>
+      <button className='btn btn-danger' onClick={() => setCount(count - 1)}>Decrement</button>
     </div>
   );
 }
@@ -27,9 +32,10 @@ function Counter() {
 function Header() {
   return (
     <>
-      <div style={headerStyle}>
+      <div>
         I am this website's Header!
-      </div><hr />
+      </div>
+      <hr />
     </>
   );
 }
@@ -39,7 +45,7 @@ function Footer() {
   return (
     <>
       <hr />
-      <div style={footerStyle}>
+      <div>
         I am this app's Footer!
       </div>
     </>
@@ -49,9 +55,9 @@ function Footer() {
 // This component is to be used to include all the main content for the website
 function Content() {
   return (
-    <>
+    <CountProvider>
       <Counter />
-    </>
+    </CountProvider>
   );
 }
 
