@@ -5,6 +5,9 @@
 - Components ✅
 - Props ✅
     - Parent and Child Communication Between Props ✅
+
+# Day Two
+
 - State Management (useState)
 - Effect Hook (useEffect)
 - Conditional Rendering
