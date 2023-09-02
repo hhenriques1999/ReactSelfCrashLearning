@@ -8,7 +8,8 @@
 
 # Day Two
 
-- State Management (useState)
+- State Management (useState) ✅
+    - Redux State Management ✅
 - Effect Hook (useEffect)
 - Conditional Rendering
 - Lists and Keys
