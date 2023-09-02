@@ -1,8 +1,5 @@
 import './App.css';
-import React, { } from 'react';
-import { Provider } from 'react-redux';
-import store from './store';
-import Counter from './Counter'
+import React from 'react';
 
 // This component is a header
 function Header() {
@@ -32,9 +29,7 @@ function Footer() {
 function Content() {
   return (
     <>
-      <Provider store={store}>
-        <Counter />  
-      </Provider>
+      Hello World!
     </>
   );
 }
