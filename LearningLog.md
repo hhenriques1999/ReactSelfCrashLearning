@@ -13,7 +13,7 @@
 - Effect Hook (useEffect) ✅
 - Conditional Rendering ✅
     - Conditional Rendering with Components ✅
-- Lists and Keys
+- Lists and Keys ✅
 - Event Handling
 - Controlled Components
 - Component Composition
