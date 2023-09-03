@@ -14,7 +14,7 @@
 - Conditional Rendering ✅
     - Conditional Rendering with Components ✅
 - Lists and Keys ✅
-- Event Handling
+- Event Handling ✅
 - Controlled Components
 - Component Composition
 - React Fragments
