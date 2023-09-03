@@ -16,7 +16,7 @@
 - Lists and Keys ✅
 - Event Handling ✅
 - Controlled Components ✅
-- Component Composition 
+- Component Composition ✅ (a bit confuse)
 - React Fragments
 
 # Day Three
