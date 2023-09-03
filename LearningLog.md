@@ -17,7 +17,7 @@
 - Event Handling ✅
 - Controlled Components ✅
 - Component Composition ✅ (a bit confuse)
-- React Fragments
+- React Fragments ✅ (already covered previously by accident)
 
 # Day Three
 
