@@ -18,3 +18,12 @@
 - Controlled Components
 - Component Composition
 - React Fragments
+
+# Day Three
+
+- Router for Page Navigation
+- Component Lifecycle
+- Code splitting and lazy loading
+- Unit Testing
+- Integration Testing
+- Fetch API
