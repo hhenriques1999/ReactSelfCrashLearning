@@ -15,8 +15,8 @@
     - Conditional Rendering with Components ✅
 - Lists and Keys ✅
 - Event Handling ✅
-- Controlled Components
-- Component Composition
+- Controlled Components ✅
+- Component Composition 
 - React Fragments
 
 # Day Three
