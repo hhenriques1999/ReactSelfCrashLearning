@@ -22,8 +22,8 @@
 # Day Three
 
 - Router for Page Navigation ✅ (a bit outdated considering GPT's cutoff)
-- Component Lifecycle
-- Code splitting and lazy loading
+- Component Lifecycle ✅ (already covered previously by accident)
+- Code splitting and lazy loading ✅
 - Unit Testing
 - Integration Testing
 - Fetch API
