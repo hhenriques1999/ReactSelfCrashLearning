@@ -1,41 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import UserList from './UserList';
+import './App.css';
+import React, { useEffect, useState } from 'react';
 
-function UserProfile() {
-  const { id } = useParams();
-  return <div>User profile for user: {id}</div>;
-}
-
-function Home() {
-  return (
-    <div>
-      <Link to="/">Home</Link>&nbsp;|&nbsp;
-      <Link to="/about">About</Link>&nbsp;|&nbsp;
-      <Link to="/users">User List</Link>
-    </div>
-  )
-}
-
-function About() {
-  return (
-    <div>
-      About my page!
-    </div>
-  )
-}
-
+// This component is the main app's component and should really only include the header, footer and content (child components)
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/users" element={<UserList />} />
-        <Route path="/user/:id" element={<UserProfile />} />
-      </Routes>
-    </Router>
+    <>
+    </>
   );
 }
 
