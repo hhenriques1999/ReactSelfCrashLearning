@@ -21,7 +21,7 @@
 
 # Day Three
 
-- Router for Page Navigation
+- Router for Page Navigation ✅ (a bit outdated considering GPT's cutoff)
 - Component Lifecycle
 - Code splitting and lazy loading
 - Unit Testing
