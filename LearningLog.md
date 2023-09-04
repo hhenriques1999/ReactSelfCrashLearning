@@ -24,6 +24,6 @@
 - Router for Page Navigation ✅ (a bit outdated considering GPT's cutoff)
 - Component Lifecycle ✅ (already covered previously by accident)
 - Code splitting and lazy loading ✅
+- Fetch API
 - Unit Testing
 - Integration Testing
-- Fetch API
