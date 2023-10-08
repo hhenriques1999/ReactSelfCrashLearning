@@ -10,7 +10,7 @@ const TestWithMockData = ({ data, displayUnorderedList, handleClick }) => {
               {item.id}
               {item.first_name},
               {item.last_name},
-              <a onClick={() => {
+              <a href="/" onClick={() => {
                 console.log("email link clicked")
                 handleClick()
               }}>{item.email}</a>
