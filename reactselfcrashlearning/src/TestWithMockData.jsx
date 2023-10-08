@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
 const TestWithMockData = ({ data, displayUnorderedList, handleClick }) => {
@@ -31,7 +30,7 @@ const TestWithMockData = ({ data, displayUnorderedList, handleClick }) => {
         </ol>
       }
     </div>
-  )
+  );
 }
 
-export default TestWithMockData
+export default TestWithMockData;

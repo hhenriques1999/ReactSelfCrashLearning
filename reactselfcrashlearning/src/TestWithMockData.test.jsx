@@ -15,10 +15,21 @@ const mockData = [
         "last_name": "Harrild",
         "email": "charrild1@dion.ne.jp",
         "age": 35
+    },{
+        "id": 3,
+        "first_name": "Amby",
+        "last_name": "Emmer",
+        "email": "aemmer2@buzzfeed.com",
+        "age": 67
     },
 ]
 
 test("List renders successfully", () => {
-    render(<TestWithMockData data={mockData} />);
+    render(<TestWithMockData data={mockData} displayUnorderedList={true}/>);
     expect(screen.getByText(/fletcher/i)).toBeInTheDocument();
+})
+
+test("Ordered list renders", () => {
+    render(<TestWithMockData data={mockData} displayUnorderedList={false} />)
+    expect(screen.getByText(/McVanamy/i)).toBeInTheDocument();
 })
