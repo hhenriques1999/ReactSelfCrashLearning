@@ -1,14 +1,12 @@
 import { useState } from "react"
 
 const TestingStateChange = () => {
-    const [toggleTextVisible, setToggleTextVisible] = useState(false);
+    const [btnDisabled, setBtnDisabled] = useState(false);
 
     return (
         <div>
-            {toggleTextVisible && <p> Text visible </p>}
-
-            <button onClick={() => { setToggleTextVisible(!toggleTextVisible) }}>
-                Toggle text
+            <button disabled={btnDisabled} onClick={() => { setBtnDisabled(!btnDisabled) }}>
+                Toggle button disabled
             </button>
         </div>
     );

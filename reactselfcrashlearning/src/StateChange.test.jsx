@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 
 test("Toggle text visible", async () => {
     render(<TestingStateChange/>);
-    await userEvent.click(screen.getByText(/toggle text/i));
-    expect(screen.getByText(/text visible/i)).toBeInTheDocument();
+    let element = screen.getByText(/toggle button disabled/i);
+    await userEvent.click(element);
+    expect(element).toBeDisabled();
 })
